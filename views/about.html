@@ -1,25 +1,48 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-  <p>Team dusty-wind is...</p>
-  <span id="rich-jellyfish-name">
-      <p>Sam Haddaway</p>
-      <img id="rich-jellyfish-headshot" height="200" src="http://animalstime.com/wp-content/uploads/2013/04/types-of-jellyfish11.jpg">
-      <br><br>
-  </span>
-  <span id="energetic-walrus-name">
-      <p>Ben Young</p>
-      <img id="energetic-walrus-headshot" height="200" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNWHPw8TfqdenYPlfloUuI263TEPkRrt_9BGZzDNr8j3Zq7cqAMg">
-      <br><br>
-  </span>
-  <span id="rich-jellyfish-name">
-      <p>Zan Donovan</p>
-      <img id="rich-jellyfish-headshot" height="200" src="http://animalstime.com/wp-content/uploads/2013/04/types-of-jellyfish11.jpg">
-      <br><br>
-  </span>
-  <span id="vast-stingray-name">
-      <p>Arpita Bhattacharyya</p>
-      <img id="vast-stingray-headshot" height="200" src="http://7-themes.com/data_images/out/13/6810888-stingray-pictures.jpg">
-      <br><br>
-  </span>
+
+<h1>Team dusty-wind is...</h1>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <div class="thumbnail">
+      <img id="rich-jellyfish-headshot" src="http://animalstime.com/wp-content/uploads/2013/04/types-of-jellyfish11.jpg" alt="Sam Haddaway">
+      <div class="caption">
+        <span id="rich-jellyfish-name">
+          <h3>Sam Haddaway</h3>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <div class="thumbnail">
+      <img id="energetic-walrus-headshot" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNWHPw8TfqdenYPlfloUuI263TEPkRrt_9BGZzDNr8j3Zq7cqAMg" alt="Ben Young">
+      <div class="caption">
+        <span id="energetic-walrus-name">
+          <h3>Ben Young</h3>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <div class="thumbnail">
+      <img id="stormy-fox-headshot" src="https://jeanmcbride.files.wordpress.com/2010/05/istock_red-fox.jpg" alt="Zan Donovan">
+      <div class="caption">
+        <span id="stormy-fox-name">
+          <h3>Zan Donovan</h3>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <div class="thumbnail">
+      <img id="vast-stingray-headshot" src="http://7-themes.com/data_images/out/13/6810888-stingray-pictures.jpg" alt="Arpita Bhattacharyya">
+      <div class="caption">
+        <span id="vast-stingray-name">
+          <h3>Arpita Bhattacharyya</h3>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
