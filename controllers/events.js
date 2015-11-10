@@ -85,6 +85,18 @@ function saveEvent(request, response){
     contextData.errors.push('Month must be an integer.')
   }
   
+  if (request.body.hour > 23) {
+    contextData.errors.push('Hour cannot be greater than 23.');
+  }
+
+  if (request.body.hour < 0) {
+    contextData.errors.push('Hour cannot be less than 0.');
+  }
+  
+  if(request.body.hour % 1 != 0) {
+    contextData.errors.push('Hour must be an integer.')
+  }
+  
   if (contextData.errors.length === 0) {
     var newEvent = {
       title: request.body.title,
