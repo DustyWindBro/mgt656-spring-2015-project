@@ -61,10 +61,18 @@ function saveEvent(request, response){
     contextData.errors.push('Your title should be between 5 and 100 letters.');
   }
   
-    if (request.body.year > 2016) {
+  if (request.body.year > 2016) {
     contextData.errors.push('Year cannot be greater than 2016.');
   }
 
+  if (request.body.year < 2015) {
+    contextData.errors.push('Year cannot be less than 2015.');
+  }
+  
+  if(request.body.year % 1 != 0) {
+    contextData.errors.push('Year cannot include decimals.')
+  }
+  
   if (contextData.errors.length === 0) {
     var newEvent = {
       title: request.body.title,
