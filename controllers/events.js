@@ -70,7 +70,19 @@ function saveEvent(request, response){
   }
   
   if(request.body.year % 1 != 0) {
-    contextData.errors.push('Year cannot include decimals.')
+    contextData.errors.push('Year must be an integer.')
+  }
+  
+  if (request.body.month > 11) {
+    contextData.errors.push('Month cannot be greater than 11.');
+  }
+
+  if (request.body.month < 0) {
+    contextData.errors.push('Month cannot be less than 0.');
+  }
+  
+  if(request.body.month % 1 != 0) {
+    contextData.errors.push('Month must be an integer.')
   }
   
   if (contextData.errors.length === 0) {
