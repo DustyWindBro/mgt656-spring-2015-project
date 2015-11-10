@@ -60,7 +60,10 @@ function saveEvent(request, response){
   if (validator.isLength(request.body.title, 5, 50) === false) {
     contextData.errors.push('Your title should be between 5 and 100 letters.');
   }
-
+  
+    if (request.body.year > 2016) {
+    contextData.errors.push('Year cannot be greater than 2016.');
+  }
 
   if (contextData.errors.length === 0) {
     var newEvent = {
