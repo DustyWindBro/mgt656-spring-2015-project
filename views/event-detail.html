@@ -13,4 +13,17 @@
 <p>This is the event detail page for {{event.title}}</p>
 <img src="{{event.img}}"id="image"></img>
 <p>Please Come!</p>
+{% if errors %}
+<div>
+    <ul class="form-errors">
+        {% for error in errors %}
+        <li>{{error}}</li>
+            {% endfor %}
+    </ul>
+</div>
+{% endif %}
+<form method="POST">
+    <input type="text" name="email" id="email" placeholder="Your Email"/>
+    <input type="Submit" value="Submit"/>
+</form>
 {% endblock %}
