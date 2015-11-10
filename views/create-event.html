@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-
+<h1>Create a new event:</h1>
   {% if errors %}
     <div class="form-errors">
       <p>Please correct the following errors!</p>
@@ -14,32 +14,30 @@
   {% endif %}
 
 	<form id="create-event" method="POST">
-    <div>
+    <div class="form-group">
       <label for="title">Event title:</label>
-      <input type="text" name="title">
+      <input type="text" name="title" class="form-control">
     </div>
     
-    <div>
+    <div class="form-group">
       <label for="location">Event Location:</label>
-      <input type="text" name="location">
+      <input type="text" name="location" class="form-control">
     </div>
     
-    <div>
+    <div class="form-group">
       <label for="image">Event Image:</label>
-      <input type="text" name="image">
+      <input type="text" name="image" class="form-control">
     </div>
     
-    <div>
+    <div class="form-inline">
       <label for="year">Event Year:</label>
-      <select name="year">
+      <select name="year" class="form-control">
         <option value="2015">2015</option>
         <option value="2016">2016</option>
       </select>
-    </div>
-        
-    <div>
+    
       <label for="month">Event Month:</label>
-      <select name="month">
+      <select name="month" class="form-control">
         <option value="0">January</option>
         <option value="1">February</option>
         <option value="2">March</option>
@@ -53,11 +51,9 @@
         <option value="10">November</option>
         <option value="11">December</option>
       </select>
-    </div>
-    
-    <div>
+
       <label for="day">Event Day:</label>
-      <select name="day">
+      <select name="day" class="form-control">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -91,10 +87,10 @@
         <option value="31">31</option>
       </select>
     </div>
-    
-    <div>
+    <br/>
+    <div class="form-inline">
       <label for="hour">Event hour:</label>
-      <select name="hour">
+      <select name="hour" class="form-control">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -122,13 +118,13 @@
       </select>
 
       <label for="minute">Event Minute:</label>
-      <select name="minute">
+      <select name="minute" class="form-control" width: 50%>
         <option value="0">:00</option>
         <option value="30">:30</option>
       </select>
     </div>
-    
-    <input type="submit" id="submit" value="Submit">
+    <br/>
+    <input type="submit"  class="btn btn-default" id="submit" value="Submit">
     
 <!--location image year month day hour minute-->
     
