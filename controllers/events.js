@@ -139,14 +139,15 @@ function rsvp (request, response){
     response.render('event-detail.html', contextData);    
   }
 }
-function api(request, response){
+
+function api (request, response){
   var output={events: []};
   var search = request.query.search; 
   if(search){
     for(var i=0; i < events.all.length; i++){
       if(events.all[i].title.indexOf(search) !== -1){
-    output.events.push(events.all[i]);
-    }
+        output.events.push(events.all[i]);
+      }
     }
   }else{
     output.events=events.all;
@@ -163,5 +164,6 @@ module.exports = {
   'eventDetail': eventDetail,
   'newEvent': newEvent,
   'saveEvent': saveEvent,
-  'rsvp': rsvp
+  'rsvp': rsvp,
+  'api': api
 };
