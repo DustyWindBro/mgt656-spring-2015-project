@@ -73,6 +73,18 @@ function saveEvent(request, response){
     contextData.errors.push('Year must be an integer.')
   }
   
+  if (request.body.day % 1 != 0) {
+    contextData.errors.push('Day must be an integer.');
+    
+  }
+  if (request.body.day > 31) {
+    contextData.errors.push('Day must be greater than 1.');
+    
+  }
+  if (request.body.day < 1) {
+    contextData.errors.push('Day must be greater than 1.');
+    
+  }
   if (request.body.month > 11) {
     contextData.errors.push('Month cannot be greater than 11.');
   }
@@ -85,12 +97,24 @@ function saveEvent(request, response){
     contextData.errors.push('Month must be an integer.')
   }
   
+   if (request.body.location > 49) {
+    contextData.errors.push('Location must be less than 50 characters');
+  }
+  
   if (request.body.hour > 23) {
     contextData.errors.push('Hour cannot be greater than 23.');
   }
 
   if (request.body.hour < 0) {
     contextData.errors.push('Hour cannot be less than 0.');
+  }
+  
+  if (validator.isURL(request.body.image) === false ){
+    contextData.errors.push('Your image link should be a URL');
+  }
+  
+  if (validator.matches(request.body.image,/\.(png|gif)$/i) === false) {
+    contextData.errors.push('Your image URL should link to a PNG or GIF');
   }
   
   if(request.body.hour % 1 != 0) {
