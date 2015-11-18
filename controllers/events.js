@@ -97,8 +97,12 @@ function saveEvent(request, response){
     contextData.errors.push('Month must be an integer.')
   }
   
-   if (request.body.location > 49) {
+  if (request.body.location > 49) {
     contextData.errors.push('Location must be less than 50 characters');
+  }
+  
+  if (validator.isLength(request.body.location, 0, 0) === true) {
+    contextData.errors.push('Location cannot be blank');
   }
   
   if (request.body.hour > 23) {
