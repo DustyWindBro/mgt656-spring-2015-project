@@ -41,14 +41,14 @@
 var pageVariations = [
   function() {},  // Original: Do nothing. This will render the default HTML.
   function() {    // Variation 1: add RSVP text
-    $( 'a.donation' ).replaceWith( '<a class="donation" href="/">Donate</a>' );
+    $('.donation' ).replaceWith( '<a class="donation" href="/">Donate</a>' );
   }
 ];
 
 // Wait for the DOM to load, then execute the view for the chosen variation.
 $(document).ready(function(){
   // Ask Google Analytics which variation to show the user.
-  var chosenVariation = cxApi.chooseVariation(pLgBLRIqT5eZHvPPOY0p9A);
+  var chosenVariation = cxApi.chooseVariation();
 
   // Execute the chosen view
   pageVariations[chosenVariation]();
