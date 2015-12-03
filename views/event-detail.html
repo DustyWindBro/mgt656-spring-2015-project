@@ -22,7 +22,7 @@
     </ul>
 </div>
 {% endif %}
-<a class="donation" href="/">Support here</a>
+<a class="donation" href="/">Support</a>
 <form method="POST">
     <input type="text" name="email" id="email" placeholder="Your Email"/>
     <input type="Submit" value="Submit"/>
@@ -41,7 +41,7 @@
 var pageVariations = [
   function() {},  // Original: Do nothing. This will render the default HTML.
   function() {    // Variation 1: add RSVP text
-    $( 'li.event-title' ).prepend( 'Donate' );
+    $( 'a.donation' ).replaceWith( '<a class="donation" href="/">Donate</a>' );
   }
 ];
 
