@@ -1,19 +1,24 @@
-h1 {font: 30px "Lucida Grande", Helvetica, Arial, sans-serif;
-    text-align: center;
+h1 {text-transform:uppercase;
+    font-size:70px;
 }
-h2 {font: 30px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+h2 {font: 70px "Lucida Grande", Helvetica, Arial, sans-serif;
     text-align: right;
+    font-weight:bold;
 }
 body {
   padding: 50px;
-  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
   background-image: url("http://travel.nationalgeographic.com/u/TvyamNb-BivtNwcoxtkc5xGBuGkIMh_nj4UJHQKuorwdC3uZse3M8QhDCVlv7qScvtVKA5szYGjZ1g/");
   background-size: 1600px 1000px;
   background-repeat: no-repeat;
 }
 
 a {
-  color: #00000;
+  color: #00B7FF;
+  text-transform:uppercase;
+    font-size:20px;
 }
 
 .form-errors {

@@ -1,24 +1,32 @@
 {% extends "layout.html" %}
 
+{% block extralinks %}
+<link rel='stylesheet' href='/stylesheets/index.css' />
+{% endblock %}
+
 {% block header %}
-  <header>
-    <h1>{{ title }}</h1>
+  <header> 
+    <h1>
+      {{ title }}</h1>
   </header>
 {% endblock %}
 
 {% block mainContent %}
-  <p class="lead">
+  <p class="lead">  
     Welcome to {{ title }}. {{tagline}}
   </p>
- <img id="logo" src="http://i68.tinypic.com/353593c.png">
+ <img id="logo" src="http://i65.tinypic.com/213rx2c.png">
+ <br></br>
   <p>
     Check out the <a href="/about">About me</a> page
     as well as the <a href="/events">Events</a> page.
   </p>
+  <br></br>
   <p>Here is a list of all events:</p>
-  <div>
+  <div style="text-align:left";>
     {% include "fragments/events-list.html" %}
   </div>
+  <br></br>
   <p>
     <a id="new" href="/events/new">Create a new event</a>
   </p>
