@@ -1,10 +1,16 @@
 {% extends "layout.html" %}
 
+{% block extralinks %}
+<link rel='stylesheet' href='/stylesheets/event.css' />
+{% endblock %}
+
 {% block mainContent %}
+  <br></br>
   <div>
     {% include "fragments/events-list.html" %}
   </div>
-  <div>
+  <br></br>
+  <div style="text-align:center; color:black;">
     <a href="/events/new">Create a new event</a>
   </div>
 
