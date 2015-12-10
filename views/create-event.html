@@ -3,14 +3,13 @@
 {% block mainContent %}
 <h1>Create a new event:</h1>
   {% if errors %}
-    <div class="form-errors">
+    <ul class="form-errors">
       <p>Please correct the following errors!</p>
       <ul>
         {% for error in errors %}
           <li>{{error}}</li>
         {% endfor %}
       </ul>
-    </div>
   {% endif %}
 
 	<form id="create-event" method="POST">
